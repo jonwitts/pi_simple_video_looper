@@ -18,7 +18,15 @@ apt-get dist-upgrade -y
 # install our required packages
 echo "Installing dependencies..."
 echo "=========================="
-apt-get install wget omxplayer -y
+apt-get install wget omxplayer debhelper git -y
+cd /
+git clone https://github.com/rbrito/usbmount.git
+cd usbmount
+dpkg-buildpackage -us -uc -b
+cd ..
+apt install  ./usbmount_0.*_all.deb
 
 # copy our bash script
-
+mkdir /piSimpleVideoLooper
+cd /piSimpleVideoLooper
+wget https://raw.githubusercontent.com/jonwitts/pi_simple_video_looper/master/piSimpleVideoLooper.sh
