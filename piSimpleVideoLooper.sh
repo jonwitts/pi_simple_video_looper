@@ -8,14 +8,20 @@ usbmount=""
 for i in "${mounts[@]}"
 do
     if mountpoint -q $i; then
-        echo "$i is a mountpoint"
+        #echo "$i is a mountpoint"
         usbmount=$i
     else
-        echo "$i is not a mountpoint"
+        #echo "$i is not a mountpoint"
     fi
 done
-echo "First USB Mount point is at $usbmount"
+#echo "First USB Mount point is at $usbmount"
 
-# now search the USB drive for video files
+# now search the USB drive for mp4 files
+
+cd $usbmount
+for file in *.@(mp4|avi)
+do
+    echo "Found $file"
+done
 
 # now play the first video file found, looping it with omxplayer
