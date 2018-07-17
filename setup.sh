@@ -18,13 +18,7 @@ apt-get dist-upgrade -y
 # install our required packages
 echo "Installing dependencies..."
 echo "=========================="
-apt-get install wget omxplayer usbmount -y
-#cd /
-#git clone https://github.com/rbrito/usbmount.git
-#cd usbmount
-#dpkg-buildpackage -us -uc -b
-#cd ..
-#apt install  ./usbmount_0.*_all.deb
+apt-get install wget omxplayer mountpoint usbmount -y
 
 # Configure USBMount for Stretch
 # from https://vivekanandxyz.wordpress.com/2017/12/29/detecting-and-automatically-mounting-pendrive-on-raspbian-stretch-lite/
