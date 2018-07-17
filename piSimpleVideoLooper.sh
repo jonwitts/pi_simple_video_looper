@@ -8,13 +8,13 @@ usbmount=""
 for i in "${mounts[@]}"
 do
     if mountpoint -q $i; then
-        #echo "$i is a mountpoint"
+        echo "$i is a mountpoint"
         usbmount=$i
-    #else
-        #echo "$i is not a mountpoint"
-    #fi
+    else
+        echo "$i is not a mountpoint"
+    fi
 done
-#echo "First USB Mount point is at $usbmount"
+echo "First USB Mount point is at $usbmount"
 
 # now search the USB drive for mp4 files
 
