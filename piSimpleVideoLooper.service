@@ -1,0 +1,10 @@
+[Unit]
+Description=Pi Simple Video Looper
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/piSimpleVideoLooper/piSimpleVideoLooper.sh
+
+[Install]
+WantedBy=multi-user.target

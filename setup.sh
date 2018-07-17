@@ -37,8 +37,30 @@ wget -N https://raw.githubusercontent.com/jonwitts/pi_simple_video_looper/master
 chmod +x ./piSimpleVideoLooper.sh
 
 # copy our shutdown Python script
+echo "Install our Python shutdown script..."
+echo "=========================="
+wget -N https://raw.githubusercontent.com/jonwitts/pi_simple_video_looper/master/pythonShutdown.py
+chmod +x ./pythonShutdown.py
 
 # copy and activate our systemd definitions
+echo "Copy and activate our systemd definitions..."
+echo "=========================="
+# piSimpleVideoLooper service
 wget -N https://raw.githubusercontent.com/jonwitts/pi_simple_video_looper/master/piSimpleVideoLooper.service
 mv ./piSimpleVideoLooper.service /lib/systemd/system/piSimpleVideoLooper.service
+chmod 644 /lib/systemd/system/piSimpleVideoLooper.service
 
+# pythonShutdown service
+wget -N https://raw.githubusercontent.com/jonwitts/pi_simple_video_looper/master/pythonShutdown.service
+mv ./piSimpleVideoLooper.service /lib/systemd/system/pythonShutdown.service
+chmod 644 /lib/systemd/system/pythonShutdown.service
+
+# reload and enable
+systemctl daemon-reload
+systemctl enable piSimpleVideoLooper.service
+systemctl enable pythonShutdown.service
+
+# done
+echo "Done. Rebooting now"
+echo "=========================="
+reboot
