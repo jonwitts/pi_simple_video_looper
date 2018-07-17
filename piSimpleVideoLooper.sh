@@ -10,9 +10,9 @@ do
     if mountpoint -q $i; then
         #echo "$i is a mountpoint"
         usbmount=$i
-    else
+    #else
         #echo "$i is not a mountpoint"
-    fi
+    #fi
 done
 #echo "First USB Mount point is at $usbmount"
 
