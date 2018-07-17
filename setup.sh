@@ -52,7 +52,7 @@ chmod 644 /lib/systemd/system/piSimpleVideoLooper.service
 
 # pythonShutdown service
 wget -N https://raw.githubusercontent.com/jonwitts/pi_simple_video_looper/master/pythonShutdown.service
-mv ./piSimpleVideoLooper.service /lib/systemd/system/pythonShutdown.service
+mv ./pythonShutdown.service /lib/systemd/system/pythonShutdown.service
 chmod 644 /lib/systemd/system/pythonShutdown.service
 
 # reload and enable
