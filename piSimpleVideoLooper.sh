@@ -9,12 +9,12 @@ for i in "${mounts[@]}"
 do
     if mountpoint -q $i; then
         echo "$i is a mountpoint"
-        $usbmount = $i
+        usbmount=$i
     else
         echo "$i is not a mountpoint"
     fi
 done
-echo $usbmount
+echo "First USB Mount point is at $usbmount"
 
 # now search the USB drive for video files
 
