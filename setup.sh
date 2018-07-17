@@ -23,7 +23,7 @@ apt-get install python3-gpiozero -y
 
 # Configure USBMount for Stretch
 # from https://vivekanandxyz.wordpress.com/2017/12/29/detecting-and-automatically-mounting-pendrive-on-raspbian-stretch-lite/
-echo "Configur USBMount..."
+echo "Configure USBMount..."
 echo "=========================="
 sed -i '/MountFlags=slave/c\MountFlags=shared' /lib/systemd/system/systemd-udevd.service
 systemctl daemon-reload
