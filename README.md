@@ -1,2 +1,4 @@
 # pi_simple_video_looper
-A Python 3 Video Looper for the Raspberry Pi
+A Bash Video Looper for the Raspberry Pi and a Python3 shutdown button and LED indicator
+
+http://bit.ly/PiLooper
