@@ -18,7 +18,7 @@ apt-get dist-upgrade -y
 # install our required packages
 echo "Installing dependencies..."
 echo "=========================="
-apt-get install wget omxplayer mountpoint usbmount -y
+apt-get install wget omxplayer mountpoint usbmount python3 python3-gpiozero -y
 
 # Configure USBMount for Stretch
 # from https://vivekanandxyz.wordpress.com/2017/12/29/detecting-and-automatically-mounting-pendrive-on-raspbian-stretch-lite/
@@ -34,6 +34,8 @@ mkdir /piSimpleVideoLooper
 cd /piSimpleVideoLooper
 wget -N https://raw.githubusercontent.com/jonwitts/pi_simple_video_looper/master/piSimpleVideoLooper.sh
 chmod +x ./piSimpleVideoLooper.sh
+
+# copy our shutdown Python script
 
 # copy and activate our systemd definitions
 wget -N https://raw.githubusercontent.com/jonwitts/pi_simple_video_looper/master/piSimpleVideoLooper.service
