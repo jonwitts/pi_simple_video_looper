@@ -18,7 +18,8 @@ apt-get dist-upgrade -y
 # install our required packages
 echo "Installing dependencies..."
 echo "=========================="
-apt-get install wget omxplayer mountpoint usbmount python3 python3-gpiozero -y
+apt-get install wget omxplayer util-linux usbmount python3 -y
+apt-get install python3-gpiozero -y
 
 # Configure USBMount for Stretch
 # from https://vivekanandxyz.wordpress.com/2017/12/29/detecting-and-automatically-mounting-pendrive-on-raspbian-stretch-lite/
