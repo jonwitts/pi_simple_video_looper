@@ -33,7 +33,7 @@ echo "=========================="
 mkdir /piSimpleVideoLooper
 cd /piSimpleVideoLooper
 wget -N https://raw.githubusercontent.com/jonwitts/pi_simple_video_looper/master/piSimpleVideoLooper.sh
-chmod +x ./piSimpleVideoLooper
+chmod +x ./piSimpleVideoLooper.sh
 
 # copy and activate our systemd definitions
 wget -N https://raw.githubusercontent.com/jonwitts/pi_simple_video_looper/master/piSimpleVideoLooper.service
