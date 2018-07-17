@@ -22,15 +22,20 @@ apt-get install wget omxplayer mountpoint usbmount -y
 
 # Configure USBMount for Stretch
 # from https://vivekanandxyz.wordpress.com/2017/12/29/detecting-and-automatically-mounting-pendrive-on-raspbian-stretch-lite/
+echo "Configur USBMount..."
+echo "=========================="
 sed -i '/MountFlags=slave/c\MountFlags=shared' /lib/systemd/system/systemd-udevd.service
 systemctl daemon-reload
 
 # copy our bash script
+echo "Install our piSimpleVideoLooper script..."
+echo "=========================="
 mkdir /piSimpleVideoLooper
 cd /piSimpleVideoLooper
-wget https://raw.githubusercontent.com/jonwitts/pi_simple_video_looper/master/piSimpleVideoLooper.sh
+wget -N https://raw.githubusercontent.com/jonwitts/pi_simple_video_looper/master/piSimpleVideoLooper.sh
+chmod +x ./piSimpleVideoLooper
 
 # copy and activate our systemd definitions
-wget https://raw.githubusercontent.com/jonwitts/pi_simple_video_looper/master/piSimpleVideoLooper.service
+wget -N https://raw.githubusercontent.com/jonwitts/pi_simple_video_looper/master/piSimpleVideoLooper.service
 mv ./piSimpleVideoLooper.service /lib/systemd/system/piSimpleVideoLooper.service
 
