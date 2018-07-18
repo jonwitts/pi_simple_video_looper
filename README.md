@@ -13,6 +13,6 @@ Once everything is installed you can plug a USB stick into your Raspberry Pi wit
 
 To safely shut your Raspberry Pi down, press and hold the button for three seconds. You will then see the LED flash three times and your Pi will then safely shutdown. Just switch the power off and on again to restart your Video Looper!
 
-Tested against Raspbain Stretch Lite. It should also work with teh full Stretch but it makes more sense to use the Lite version as you will no doubt want to run this headless...
+Tested against Raspbain Stretch Lite. It should also work with the full Raspbian Stretch but it makes more sense to use the Lite version as you will no doubt want to run this headless...
 
 <img src="pythonShutdownWiring_bb.png" alt="Wiring diagram for the python shutdown script" width="50%" height="50%" />
