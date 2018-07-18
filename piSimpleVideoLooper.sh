@@ -1,6 +1,12 @@
 #!/bin/bash
 
 # A simple Video Looper for the Raspberry Pi
+#
+# author:  Jon Witts
+# license: GPL-3.0, see LICENSE included in this package
+#
+# A Bash Video Looper for the Raspberry Pi and a Python3 shutdown button and LED indicator
+# https://github.com/jonwitts/pi_simple_video_looper
 
 # first find the first attached USB drive
 # scan in reverse order to find the first!
