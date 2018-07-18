@@ -12,3 +12,5 @@ To setup the shutdown button and LED you will need to connect a push button and 
 Once everything is installed you can plug a USB stick into your Raspberry Pi with a MP4 or AVI video on it and then when you start the Pi up, it will auto mount the USB stick for you, scan it for MP4 or AVI files and play the last one it finds.
 
 To safely shut your Raspberry Pi down, press and hold the button for three seconds. You will then see the LED flash three times and your Pi will then safely shutdown. Just switch the power off and on again to restart your Video Looper!
+
+![Wiring diagram for the python shutdown script](pythonShutdownWiring_bb.png)
