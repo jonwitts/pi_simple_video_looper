@@ -26,5 +26,5 @@ for file in $usbmount/*.mp4 $usbmount/*.avi ; do
 done
 
 # now play the last video file found, looping it with omxplayer
-omxplayer --loop --adev both "$filePlay"
+omxplayer -b --loop --adev both "$filePlay"
 
